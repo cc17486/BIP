@@ -1,0 +1,11 @@
+BIP39 vanity phrase generator — airgapped single-file build
+
+sha256 (hash region zeroed): d99b7d2528ed25f300ea91ff7675482d24ab0b474241a831408883d58553d06e
+bytes: 205384
+built: 2026-10-27T06:39:36.516Z
+
+Verify before trusting:
+  node scripts/check-hash.mjs dist/vanity-phrase.html
+
+Deploy: copy vanity-phrase.html to the phone and open it from local storage.
+The page issues no network requests; the CSP has connect-src none.

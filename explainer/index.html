@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="description" content="Visual explainer: why a 23-word BIP39 prefix has exactly eight valid endings">
+<title>Why eight endings — visual explainer</title>
+</head>
+<body>
+<div id="stage" data-apphash="0000000000000000000000000000000000000000000000000000000000000000"></div>
+
+<header class="hud top">
+  <div class="brand">
+    <span class="dot"></span>
+    <span>Vanity phrase · how it works</span>
+  </div>
+  <div class="acts" id="acts" aria-label="Chapters"></div>
+</header>
+
+<section class="hud captions" id="captions" aria-live="polite">
+  <h1 id="caption-title">Loading…</h1>
+  <p id="caption-body"></p>
+</section>
+
+<footer class="hud bottom">
+  <div class="controls">
+    <button id="play" type="button" aria-pressed="false">Pause</button>
+    <button id="step" type="button">Next chapter</button>
+    <button id="restart" type="button" class="ghost">Restart</button>
+    <span class="speed" role="group" aria-label="Speed">
+      <button type="button" data-speed="0.5">0.5×</button>
+      <button type="button" data-speed="1" aria-pressed="true">1×</button>
+      <button type="button" data-speed="1.75">1.75×</button>
+    </span>
+  </div>
+  <p class="hint">All numbers below are computed live by the same code the generator uses. Nothing is fetched.</p>
+</footer>
+
+<div id="fallback" class="fallback" hidden>
+  <h1>WebGL is unavailable</h1>
+  <p>This visual explainer needs WebGL, which this browser has disabled. The generator itself does not — it works without it.</p>
+  <p>The short version: 23 words are 253 bits; the last word is 3 free bits plus an 8-bit checksum, so exactly eight words can finish any 23-word prefix.</p>
+</div>
+
+<script type="module" src="./main.ts"></script>
+</body>
+</html>
